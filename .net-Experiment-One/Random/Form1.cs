@@ -23,25 +23,36 @@ namespace RandomNum
             if (textBoxM.Text != "" && textBoxN.Text != "")
             {
                 int n = int.Parse(textBoxN.Text), m = int.Parse(textBoxM.Text);
-                int[] arr=new int[n+1];
+                if (m > n)
+                {
+                    MessageBox.Show("请输入正确的n，m值！");
+                }
+                else
+                {
+                    int[] arr = new int[n + 1];
 
-                for (int i =0; i<arr.Length; i++)
-                {
-                    arr[i] = i;
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        arr[i] = i;
+                    }
+                    for (int i = 1; i <= m; i++)
+                    {
+                        Random r = new();
+                        int ranKey = r.Next(i, n);
+                        int temp = arr[ranKey];
+                        arr[ranKey] = arr[i];
+                        arr[i] = temp;
+                    }
+                    textBoxOut.Text = "";
+                    for (int i = 1; i <= m; i++)
+                    {
+                        textBoxOut.Text = textBoxOut.Text + arr[i] + " ";
+                    }
                 }
-                for(int i=1;i<=m ; i++) 
-                {
-                    Random r = new();
-                    int ranKey = r.Next(i, n);
-                    int temp = arr[ranKey];
-                    arr[ranKey] = arr[i];
-                    arr[i] = temp;
-                }
-                for(int i=1;i<=m ;i++ )
-                {
-                    textBoxOut.Text = textBoxOut.Text+ arr[i] + " ";
-                }
-
+            }
+            else
+            {
+                MessageBox.Show("请输入正确的n，m值！");
             }
         }
     }

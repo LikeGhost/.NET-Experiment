@@ -98,6 +98,7 @@ namespace RandomNum
             this.textBoxOut.Location = new System.Drawing.Point(12, 117);
             this.textBoxOut.Multiline = true;
             this.textBoxOut.Name = "textBoxOut";
+            this.textBoxOut.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxOut.Size = new System.Drawing.Size(258, 124);
             this.textBoxOut.TabIndex = 8;
             // 
