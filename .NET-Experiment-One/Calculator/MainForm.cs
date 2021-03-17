@@ -20,10 +20,6 @@ namespace Calculator
             outTextBox.Text += btn.Text;
 
         }
-
-
-
-
         private void inputOperator(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
