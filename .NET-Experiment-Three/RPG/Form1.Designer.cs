@@ -74,7 +74,7 @@ namespace RPG
             this.button1.TabIndex = 2;
             this.button1.Text = "神灵救世光";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -85,7 +85,7 @@ namespace RPG
             this.button2.TabIndex = 3;
             this.button2.Text = "混沌灭世决";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // HPLeftUnder
             // 

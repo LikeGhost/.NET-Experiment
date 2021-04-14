@@ -20,14 +20,14 @@ namespace RPG
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            holySpirit.moveTo(loEC);
+            holySpirit.MoveTo(loEC);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-            loEC.moveTo(holySpirit);
+            loEC.MoveTo(holySpirit);
         }
 
        
