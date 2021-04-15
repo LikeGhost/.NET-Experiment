@@ -15,14 +15,15 @@ namespace RPG
         public Form1()
         {
             InitializeComponent();
-            holySpirit = new HolySpirit(HolySpiritBox,HPLeft);
-            loEC = new LoEC(LoECBox,HPRight);
+            holySpirit = new HolySpirit(HolySpiritBox,HPOne);
+            loEC = new LoEC(LoECBox,HPTwo);
 
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             holySpirit.MoveTo(loEC);
+
         }
 
         private void Button2_Click(object sender, EventArgs e)

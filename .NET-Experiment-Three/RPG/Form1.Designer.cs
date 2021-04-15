@@ -34,31 +34,36 @@ namespace RPG
             this.LoECBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.HPLeftUnder = new System.Windows.Forms.Label();
-            this.HPRightUnder = new System.Windows.Forms.Label();
-            this.HPRight = new System.Windows.Forms.Label();
-            this.HPLeft = new System.Windows.Forms.Label();
+            this.UnderHPOne = new System.Windows.Forms.Label();
+            this.UnderHPTwo = new System.Windows.Forms.Label();
+            this.HPTwo = new System.Windows.Forms.Label();
+            this.HPOne = new System.Windows.Forms.Label();
+            this.HPThree = new System.Windows.Forms.Label();
+            this.UnderHPtree = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.HolySpiritBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoECBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HolySpiritBox
             // 
             this.HolySpiritBox.BackColor = System.Drawing.SystemColors.Control;
             this.HolySpiritBox.Image = ((System.Drawing.Image)(resources.GetObject("HolySpiritBox.Image")));
-            this.HolySpiritBox.Location = new System.Drawing.Point(15, 301);
+            this.HolySpiritBox.InitialImage = null;
+            this.HolySpiritBox.Location = new System.Drawing.Point(15, 66);
             this.HolySpiritBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HolySpiritBox.Name = "HolySpiritBox";
             this.HolySpiritBox.Size = new System.Drawing.Size(341, 320);
             this.HolySpiritBox.TabIndex = 0;
             this.HolySpiritBox.TabStop = false;
-  
             // 
             // LoECBox
             // 
             this.LoECBox.Image = ((System.Drawing.Image)(resources.GetObject("LoECBox.Image")));
             this.LoECBox.InitialImage = null;
-            this.LoECBox.Location = new System.Drawing.Point(1127, 301);
+            this.LoECBox.Location = new System.Drawing.Point(1329, 58);
             this.LoECBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoECBox.Name = "LoECBox";
             this.LoECBox.Size = new System.Drawing.Size(341, 320);
@@ -67,8 +72,8 @@ namespace RPG
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 660);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(111, 392);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 2;
@@ -78,8 +83,8 @@ namespace RPG
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1253, 660);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(1464, 384);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 3;
@@ -87,56 +92,98 @@ namespace RPG
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // HPLeftUnder
+            // UnderHPOne
             // 
-            this.HPLeftUnder.BackColor = System.Drawing.Color.Yellow;
-            this.HPLeftUnder.Location = new System.Drawing.Point(12, 171);
-            this.HPLeftUnder.Name = "HPLeftUnder";
-            this.HPLeftUnder.Size = new System.Drawing.Size(256, 32);
-            this.HPLeftUnder.TabIndex = 4;
+            this.UnderHPOne.BackColor = System.Drawing.Color.Yellow;
+            this.UnderHPOne.Location = new System.Drawing.Point(15, 22);
+            this.UnderHPOne.Name = "UnderHPOne";
+            this.UnderHPOne.Size = new System.Drawing.Size(256, 32);
+            this.UnderHPOne.TabIndex = 4;
             // 
-            // HPRightUnder
+            // UnderHPTwo
             // 
-            this.HPRightUnder.BackColor = System.Drawing.Color.Yellow;
-            this.HPRightUnder.Location = new System.Drawing.Point(1212, 171);
-            this.HPRightUnder.Name = "HPRightUnder";
-            this.HPRightUnder.Size = new System.Drawing.Size(256, 32);
-            this.HPRightUnder.TabIndex = 5;
+            this.UnderHPTwo.BackColor = System.Drawing.Color.Yellow;
+            this.UnderHPTwo.Location = new System.Drawing.Point(1415, 22);
+            this.UnderHPTwo.Name = "UnderHPTwo";
+            this.UnderHPTwo.Size = new System.Drawing.Size(256, 32);
+            this.UnderHPTwo.TabIndex = 5;
             // 
-            // HPRight
+            // HPTwo
             // 
-            this.HPRight.BackColor = System.Drawing.Color.Red;
-            this.HPRight.Location = new System.Drawing.Point(1212, 171);
-            this.HPRight.Name = "HPRight";
-            this.HPRight.Size = new System.Drawing.Size(256, 32);
-            this.HPRight.TabIndex = 6;
+            this.HPTwo.BackColor = System.Drawing.Color.Red;
+            this.HPTwo.Location = new System.Drawing.Point(1415, 22);
+            this.HPTwo.Name = "HPTwo";
+            this.HPTwo.Size = new System.Drawing.Size(256, 32);
+            this.HPTwo.TabIndex = 6;
             // 
-            // HPLeft
+            // HPOne
             // 
-            this.HPLeft.BackColor = System.Drawing.Color.Red;
-            this.HPLeft.Location = new System.Drawing.Point(12, 171);
-            this.HPLeft.Name = "HPLeft";
-            this.HPLeft.Size = new System.Drawing.Size(256, 32);
-            this.HPLeft.TabIndex = 7;
+            this.HPOne.BackColor = System.Drawing.Color.Red;
+            this.HPOne.Location = new System.Drawing.Point(15, 22);
+            this.HPOne.Name = "HPOne";
+            this.HPOne.Size = new System.Drawing.Size(256, 32);
+            this.HPOne.TabIndex = 7;
+            // 
+            // HPThree
+            // 
+            this.HPThree.BackColor = System.Drawing.Color.Red;
+            this.HPThree.Location = new System.Drawing.Point(15, 466);
+            this.HPThree.Name = "HPThree";
+            this.HPThree.Size = new System.Drawing.Size(256, 32);
+            this.HPThree.TabIndex = 11;
+            // 
+            // UnderHPtree
+            // 
+            this.UnderHPtree.BackColor = System.Drawing.Color.Yellow;
+            this.UnderHPtree.Location = new System.Drawing.Point(15, 466);
+            this.UnderHPtree.Name = "UnderHPtree";
+            this.UnderHPtree.Size = new System.Drawing.Size(256, 32);
+            this.UnderHPtree.TabIndex = 10;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(111, 836);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 29);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "神灵救世光";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 510);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(341, 320);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 752);
-            this.Controls.Add(this.HPLeft);
-            this.Controls.Add(this.HPRight);
-            this.Controls.Add(this.HPRightUnder);
-            this.Controls.Add(this.HPLeftUnder);
+            this.ClientSize = new System.Drawing.Size(1685, 901);
+            this.Controls.Add(this.HPThree);
+            this.Controls.Add(this.UnderHPtree);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.HPOne);
+            this.Controls.Add(this.UnderHPOne);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LoECBox);
             this.Controls.Add(this.HolySpiritBox);
+            this.Controls.Add(this.HPTwo);
+            this.Controls.Add(this.UnderHPTwo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.HolySpiritBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoECBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,10 +196,14 @@ namespace RPG
         private System.Windows.Forms.Button button2;
         private HolySpirit holySpirit;
         private LoEC loEC;
-        private System.Windows.Forms.Label HPLeftUnder;
-        private System.Windows.Forms.Label HPRightUnder;
-        private System.Windows.Forms.Label HPRight;
-        private System.Windows.Forms.Label HPLeft;
+        private System.Windows.Forms.Label UnderHPOne;
+        private System.Windows.Forms.Label UnderHPTwo;
+        private System.Windows.Forms.Label HPTwo;
+        private System.Windows.Forms.Label HPOne;
+        private System.Windows.Forms.Label HPThree;
+        private System.Windows.Forms.Label UnderHPtree;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

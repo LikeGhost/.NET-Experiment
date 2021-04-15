@@ -10,7 +10,7 @@ namespace RPG
     class Spirits
     {
 
-        public Spirits(PictureBox PictureBox, Label HeroLabel)
+        public Spirits(PictureBox PictureBox, Label HpLabel)
         {
             this.X = PictureBox.Location.X;
             this.Y = PictureBox.Location.Y;
@@ -19,7 +19,7 @@ namespace RPG
             this.Width = PictureBox.Width;
             this.Height = PictureBox.Height;
             this.PictureBox = PictureBox;
-            this.HeroLabel = HeroLabel;
+            this.HPLabel = HpLabel;
             this.HP = 1000;
         }
         public int X { get; set; }
@@ -35,7 +35,37 @@ namespace RPG
 
         public PictureBox PictureBox { get; set; }
 
-        public Label HeroLabel { get; set; }
-        public void MoveTo() { }
+        public Label HPLabel { get; set; }
+        public void MoveTo(Spirits Other) {
+
+            PictureBox.BringToFront();
+            int xSpeed = (Other.X - this.X) / 50;
+            int ySpeed = (Other.Y - this.Y) / 50;
+            while (!Tool.IsCrash(this,Other))
+            {
+                PictureBox.Left = X + xSpeed;
+                PictureBox.Top = Y + ySpeed;
+                X += xSpeed;
+                Y += ySpeed;
+                Thread.Sleep(10);
+            }
+
+            while (Math.Abs(X - OriginalX)>=10)
+            {
+                PictureBox.Left = X - xSpeed;
+                PictureBox.Top = Y - ySpeed;
+                X -= xSpeed;
+                Y -= ySpeed;
+                Thread.Sleep(10);
+            }
+            X = OriginalX;
+            Y = OriginalY;
+            PictureBox.Left = OriginalX;
+            PictureBox.Top = OriginalY;
+            int random = new Random().Next(140, 160);
+            Other.HP -= random;
+            Other.HPLabel.Width -= (int)(random * 1.0 / 1000 * 256);
+            Other.HPLabel.Left += (int)(random * 1.0 / 1000 * 256);
+        }
     }
 }
