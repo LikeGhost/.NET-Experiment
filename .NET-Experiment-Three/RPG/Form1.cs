@@ -15,22 +15,56 @@ namespace RPG
         public Form1()
         {
             InitializeComponent();
-            holySpirit = new HolySpirit(HolySpiritBox,HPOne);
-            loEC = new LoEC(LoECBox,HPTwo);
+            HS = new HolySpirit(HSBox, HPOne);
+            LoEC = new LordofEssentialChaos(LoECBox, HPTwo);
+            STR = new SaintTingRey(STRBox, HPThree);
+            DTI = new DarkThunderlshulandi(DTIBox, HPFour);
 
         }
 
+
+
         private void Button1_Click(object sender, EventArgs e)
         {
-            holySpirit.MoveTo(loEC);
+            Attacker = HS;
 
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            loEC.MoveTo(holySpirit);
+            Attacker = LoEC;
+        }
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Attacker = DTI;
+        }
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Attacker = STR;
         }
 
-       
+        private void LoECBox_Click(object sender, EventArgs e)
+        {
+            
+            Attacker.Attack(LoEC);
+        }
+
+        private void HSBox_Click(object sender, EventArgs e)
+        {
+            Attacker.Attack(HS);
+        }
+
+        
+
+        private void STRBox_Click(object sender, EventArgs e)
+        {
+            Attacker.Attack(STR);
+        }
+
+        private void DTIBox_Click(object sender, EventArgs e)
+        {
+            Attacker.Attack(DTI);
+        }
+
     }
 }

@@ -8,10 +8,11 @@ using System.Threading;
 
 namespace RPG
 {
-    class LoEC : Monster
+    class LordofEssentialChaos : Monster
     {
-        public LoEC(PictureBox PictureBox, Label HeroLabel) : base(PictureBox, HeroLabel)
+        public LordofEssentialChaos(PictureBox PictureBox, Label HeroLabel) : base(PictureBox, HeroLabel)
         {
+            AttackKind = 2;
         }
     }
 }

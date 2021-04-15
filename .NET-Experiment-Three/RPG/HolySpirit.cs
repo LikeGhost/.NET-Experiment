@@ -12,9 +12,10 @@ namespace RPG
 
         public HolySpirit(PictureBox PictureBox, Label HPLabel) : base(PictureBox,HPLabel)
         {
-            
+            AttackKind = 2;
            
         }
+        
         
     }
 } 

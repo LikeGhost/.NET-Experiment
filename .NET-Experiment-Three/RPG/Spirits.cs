@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -36,12 +37,14 @@ namespace RPG
         public PictureBox PictureBox { get; set; }
 
         public Label HPLabel { get; set; }
-        public void MoveTo(Spirits Other) {
 
+        public int AttackKind { get; set; }
+        public void MoveTo(Spirits Other)
+        {
             PictureBox.BringToFront();
             int xSpeed = (Other.X - this.X) / 50;
             int ySpeed = (Other.Y - this.Y) / 50;
-            while (!Tool.IsCrash(this,Other))
+            while (!Tool.IsCrash(this, Other))
             {
                 PictureBox.Left = X + xSpeed;
                 PictureBox.Top = Y + ySpeed;
@@ -50,7 +53,7 @@ namespace RPG
                 Thread.Sleep(10);
             }
 
-            while (Math.Abs(X - OriginalX)>=10)
+            while (Math.Abs(X - OriginalX) >= 10)
             {
                 PictureBox.Left = X - xSpeed;
                 PictureBox.Top = Y - ySpeed;
@@ -62,6 +65,24 @@ namespace RPG
             Y = OriginalY;
             PictureBox.Left = OriginalX;
             PictureBox.Top = OriginalY;
+
+        }
+
+      /*  public void Shoot(Spirits Other)
+        {
+           *//* Graphics g = new Graphics();*//*
+        }*/
+        public void Attack(Spirits Other)
+        {
+           /* if (AttackKind == 1)
+            {
+                MoveTo(Other);
+            }
+            else if (AttackKind == 2)
+            {
+                Shoot(Other);
+            }*/
+           MoveTo(Other);
             int random = new Random().Next(140, 160);
             Other.HP -= random;
             Other.HPLabel.Width -= (int)(random * 1.0 / 1000 * 256);
